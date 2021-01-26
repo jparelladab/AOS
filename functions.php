@@ -244,4 +244,53 @@ function bones_fonts() {
 
 add_action('wp_enqueue_scripts', 'bones_fonts');
 
+
+// CUSTOM TYPE SERVICIOS
+function create_gears() {
+ 
+    register_post_type( 'gears',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Gears' ),
+                'singular_name' => __( 'Gear' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'gears'),
+            'show_in_rest' => true,
+            'supports' => array('title', 'thumbnail'),
+            'taxonomies' => array( 'category' ),
+        )
+    );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_gears' );
+
+
+// CUSTOM TYPE SERVICIOS
+function create_projects() {
+ 
+    register_post_type( 'projects',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Projects' ),
+                'singular_name' => __( 'Project' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'projects'),
+            'show_in_rest' => true,
+            'supports' => array('title', 'thumbnail'),
+            'taxonomies' => array( 'category' ),
+        )
+    );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_projects' );
+
+
+
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>
