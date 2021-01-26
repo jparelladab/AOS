@@ -1,0 +1,29 @@
+{
+  "name": "aos",
+  "version": "1.0.0",
+  "description": "A Lightweight Wordpress Development Theme",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jparelladab/AOS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jparelladab/AOS/issues"
+  },
+  "homepage": "https://github.com/jparelladab/AOS#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-csscomb": "^3.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0"
+  }
+}
