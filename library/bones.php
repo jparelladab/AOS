@@ -130,6 +130,8 @@ function bones_scripts_and_styles() {
 		// register main stylesheet
 		wp_register_style( 'bones-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
 
+		//Bootstrap 4
+		// wp_register_style( 'bootstrap' , '<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">'
     //register custom stylesheet
     wp_register_style( 'custom-stylesheet', get_stylesheet_directory_uri() . '/assets/css/app.min.css', array(), '', 'all' );
 

@@ -1,3 +1,12 @@
+@font-face {
+  font-family: PolySansRegular;
+  src: url('../fonts/Poly-Regular.ttf');
+}
+@font-face {
+  font-family: PolySansBulky;
+  src: url('../fonts/Poly-Italic.ttf');
+}
+
 .green-bg {
   background-color: #70CF79;
   height: 100vh;
@@ -12,7 +21,7 @@
 
 .page-wrapper {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: auto 1fr;
 }
 
 .nav-menu ul{
@@ -59,3 +68,80 @@
 		grid-row: 2;
 	}
 }
+
+
+.category-container {
+	display: grid;
+	grid-template-columns: 10px 1fr;
+	column-gap: 20px;
+	row-gap: 30px;
+
+	.cat-name {
+		writing-mode: vertical-rl;
+		text-orientation: mixed;
+		font-size: 10px;
+	}
+}
+
+.color-bar {
+	.cat-name {
+		background-color: #000;
+	}
+	.color-bg {
+
+	}
+}
+
+.project-title a{
+	color: #FFF;
+	text-decoration: none;
+	font-size: 24px;
+	font-family: PolySansRegular;
+}
+
+a.project-anchor:hover {
+	color: inherit;
+}
+
+.nav-menu {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	height: 70vh;
+	align-items: space-between;
+
+	ul {
+		margin: 0;
+		padding: 0;
+
+		li {
+			margin-right: 20px;
+
+			a {
+				color: #FFF;
+				text-decoration: none;
+				font-family: PolySansRegular;
+			}
+		}
+	}
+}
+
+.logo {
+	color: #44d36f;
+	display: flex;
+	font-size: 30px;
+	* {
+		padding: 0 5px;
+	}
+	.A, .O {
+		border-right: 1px solid #44d36f;
+	}
+}
+
+
+.single-project-img {
+	width:100%;
+	height: 70vh;
+	object-fit: cover;
+}
+
