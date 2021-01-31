@@ -1,0 +1,16 @@
+.page-gear {
+  color:white;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  img {
+    width:400px;
+  }
+}
+
+.grid-wrapper {
+  grid-column: 2;
+}
