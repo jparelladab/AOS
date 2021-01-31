@@ -1,12 +1,18 @@
-@font-face {
-  font-family: PolySansRegular;
-  src: url('../fonts/Poly-Regular.ttf');
-}
-@font-face {
-  font-family: PolySansBulky;
-  src: url('../fonts/Poly-Italic.ttf');
-}
+@import './_variables.scss';
+@import './_home.scss';
+@import './_single-project.scss';
+@import './_work.scss';
 
+a:visited {
+  color: unset;
+}
+a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+.bg-container {
+  height: 100%;
+}
 .green-bg {
   background-color: #70CF79;
   height: 100vh;
@@ -26,81 +32,6 @@
 
 .nav-menu ul{
 	display: flex;
-}
-
-.home-grid {
-	display: grid;
-	grid-template-columns: repeat(8, 1fr);
-	grid-template-rows: 400px 400px;
-	column-gap: 50px;
-	row-gap: 50px;
-
-	.img-wrap {
-		width: 370px;
-  		height: 215px;
-  		position: relative;
-  		display: flex;
-  		justify-content: center;
-  		align-items: center;
-	}
-	img {
-		width: 100%;
-		height: 100%;
-  		object-fit: cover;
-	}
-	.img-text {
-		color: #FFF;
-		font-size:15px;
-		position: absolute;
-	}
-
-	.item1, .item4, .item5, .item8 {
-		margin: 150px 0;
-	}
-	.item2, .item3, .item6, .item7 {
-		margin: 50px 0;
-	}
-
-	.item1, .item3, .item5, .item7 {
-		grid-row: 1;
-	}
-	.item2, .item4, .item6, .item8 {
-		grid-row: 2;
-	}
-}
-
-
-.category-container {
-	display: grid;
-	grid-template-columns: 10px 1fr;
-	column-gap: 20px;
-	row-gap: 30px;
-
-	.cat-name {
-		writing-mode: vertical-rl;
-		text-orientation: mixed;
-		font-size: 10px;
-	}
-}
-
-.color-bar {
-	.cat-name {
-		background-color: #000;
-	}
-	.color-bg {
-
-	}
-}
-
-.project-title a{
-	color: #FFF;
-	text-decoration: none;
-	font-size: 24px;
-	font-family: PolySansRegular;
-}
-
-a.project-anchor:hover {
-	color: inherit;
 }
 
 .nav-menu {
@@ -126,22 +57,27 @@ a.project-anchor:hover {
 	}
 }
 
-.logo {
-	color: #44d36f;
-	display: flex;
-	font-size: 30px;
-	* {
-		padding: 0 5px;
-	}
-	.A, .O {
-		border-right: 1px solid #44d36f;
-	}
-}
 
 
-.single-project-img {
-	width:100%;
-	height: 70vh;
-	object-fit: cover;
+.menu-item::after {
+  content: '';
+  display: block;
+  height:20px;
+  width: 2px;
+  background-color: blue;
+  margin: 0 auto;
+  border-top: 1px solid green;
+  transition: height 0.3s;
 }
+
+.menu-item:hover::after{
+  height: 65vh;
+}
+
+.menu-main-menu-container, .menu {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
 

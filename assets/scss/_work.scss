@@ -1,0 +1,33 @@
+
+.category-container {
+  display: grid;
+  grid-template-columns: 10px 1fr;
+  column-gap: 20px;
+  row-gap: 30px;
+
+  .cat-name {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 10px;
+  }
+}
+
+.color-bar {
+  .cat-name {
+    background-color: #000;
+  }
+  .color-bg {
+
+  }
+}
+
+.project-title a{
+  color: #FFF;
+  text-decoration: none;
+  font-size: 24px;
+  font-family: PolySansRegular;
+}
+
+a.project-anchor:hover {
+  color: inherit;
+}

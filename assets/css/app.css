@@ -6,23 +6,6 @@
   font-family: PolySansBulky;
   src: url("../fonts/Poly-Italic.ttf"); }
 
-.green-bg {
-  background-color: #70CF79;
-  height: 100vh;
-  overflow: overlay; }
-
-.black-bg {
-  background-color: #000;
-  height: 100vh;
-  overflow: overlay; }
-
-.page-wrapper {
-  display: grid;
-  grid-template-columns: auto 1fr; }
-
-.nav-menu ul {
-  display: flex; }
-
 .home-grid {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -53,6 +36,130 @@
   .home-grid .item2, .home-grid .item4, .home-grid .item6, .home-grid .item8 {
     grid-row: 2; }
 
+.single-project-img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  transition: height 0.3s; }
+
+.img-small {
+  height: 20vh; }
+
+.project-info-container {
+  display: none; }
+
+.project-info-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 100%;
+  row-gap: 50px;
+  position: relative;
+  grid-auto-rows: 400px; }
+
+.separator-bar {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background-color: black;
+  z-index: 0; }
+
+.separator-bar::after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 1px;
+  z-index: 999;
+  position: absolute;
+  bottom: 0;
+  left: -5px; }
+
+.team {
+  grid-column: 1;
+  grid-row: 1;
+  position: relative; }
+
+.sm-text-vertical {
+  position: absolute;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 10px;
+  left: -4px;
+  top: 5px; }
+
+.team-name {
+  margin-right: 10px;
+  font-family: PolySansBulky;
+  font-size: 35px;
+  letter-spacing: 1.2px; }
+
+.team-role {
+  font-family: PolySansRegular;
+  font-size: 16px;
+  margin-top: 5px;
+  letter-spacing: 0.4 px; }
+
+.image-right {
+  grid-row: 1 / 3;
+  grid-column: 2; }
+
+.image-left img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; }
+
+.image-right img {
+  width: 100%; }
+
+.image-center {
+  grid-row: 3;
+  grid-column: 1 / 3;
+  display: flex;
+  justify-content: center;
+  z-index: 1; }
+  .image-center img {
+    width: 60%;
+    margin: 0 auto; }
+
+.more {
+  border: 1px solid green;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  line-height: 30px;
+  cursor: pointer; }
+
+.other-projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 200px;
+  column-gap: 50px; }
+
+.project-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; }
+  .project-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  .project-container .project-anchor {
+    position: absolute;
+    font-size: 20px;
+    font-family: PolySansBulky;
+    text-decoration: none; }
+
+.other-title {
+  font-family: PolySansBulky;
+  font-size: 40px; }
+
 .category-container {
   display: grid;
   grid-template-columns: 10px 1fr;
@@ -75,6 +182,33 @@
 a.project-anchor:hover {
   color: inherit; }
 
+a:visited {
+  color: unset; }
+
+a {
+  color: inherit !important;
+  text-decoration: none !important; }
+
+.bg-container {
+  height: 100%; }
+
+.green-bg {
+  background-color: #70CF79;
+  height: 100vh;
+  overflow: overlay; }
+
+.black-bg {
+  background-color: #000;
+  height: 100vh;
+  overflow: overlay; }
+
+.page-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr; }
+
+.nav-menu ul {
+  display: flex; }
+
 .nav-menu {
   display: flex;
   flex-direction: column;
@@ -91,16 +225,20 @@ a.project-anchor:hover {
         text-decoration: none;
         font-family: PolySansRegular; }
 
-.logo {
-  color: #44d36f;
-  display: flex;
-  font-size: 30px; }
-  .logo * {
-    padding: 0 5px; }
-  .logo .A, .logo .O {
-    border-right: 1px solid #44d36f; }
+.menu-item::after {
+  content: '';
+  display: block;
+  height: 20px;
+  width: 2px;
+  background-color: blue;
+  margin: 0 auto;
+  border-top: 1px solid green;
+  transition: height 0.3s; }
 
-.single-project-img {
-  width: 100%;
-  height: 70vh;
-  object-fit: cover; }
+.menu-item:hover::after {
+  height: 65vh; }
+
+.menu-main-menu-container, .menu {
+  height: 100%;
+  display: flex;
+  align-items: flex-end; }
