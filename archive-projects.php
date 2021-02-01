@@ -14,23 +14,24 @@
   }
 </style>
 <div class="black-bg page-projects">
-	<div class="container-fluid">
+	<div class="container">
 
 
-		<div class="header-projects">
-			<div class="logo" style="color:">
-				<div class="A">A</div>
-				<div class="O">O</div>
-				<div class="S">S</div>
-			</div>
-		</div>
 
-		<div class="page-wrapper">
+		<div class="fixed-left">
+  		<div class="header-projects">
+  			<div class="logo" style="color:">
+  				<div class="A">A</div>
+  				<div class="O">O</div>
+  				<div class="S">S</div>
+  			</div>
+  		</div>
 			<div class="nav-menu">
 				<?php wp_nav_menu(); ?>
 			</div>
+    </div>
 
-			<div class="content-wrapper">
+			<div class="content-wrapper content-right">
 
 				<?php $categories = get_categories();
 

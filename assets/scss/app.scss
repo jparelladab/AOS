@@ -69,8 +69,22 @@ a {
 	// height: 100vh;
 	overflow:overlay;
 }
-
+.content-right {
+  margin-left:250px;
+}
+.fixed-left {
+  position: fixed;
+  top: 32px;
+  bottom: 30%;
+  left: 0px;
+  width:250px;
+  padding-left:50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .page-wrapper {
+
 	display: grid;
 	grid-template-columns: auto 1fr;
 	column-gap: 20px;
@@ -87,5 +101,16 @@ a {
 	 writing-mode: vertical-rl;
     // text-orientation: mixed;
 }
+
+  .left-bar-container {
+    .vertical-bar {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 1fr auto;
+    }
+    column-gap: 20px;
+    display: grid;
+    grid-template-columns: 24px 1fr;
+  }
 
 
