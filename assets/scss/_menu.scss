@@ -1,4 +1,16 @@
-.menu-main-menu-container, #menu-main-menu {
+.current_page_item {
+  //align-self: flex-start;
+}
+.current-menu-item a::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 300px;
+  background-color: $greenAOS;
+  margin: 0 auto;
+}
+
+.nav-menu, .menu-main-menu-container, #menu-main-menu {
 	height: 100%;
 	li {
 		display: flex;

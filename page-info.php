@@ -1,15 +1,17 @@
 <?php get_header(); ?>
 
 <div class="black-bg">
-      <div class="container-fluid page-wrapper">
+  <div class="container-fluid page-wrapper">
 
-	<div class="nav-menu">
+    <div class="fixed-left">
+      <div></div>
+      <div class="nav-menu">
+        <?php wp_nav_menu(); ?>
+      </div>
+    </div>
 
-		<?php wp_nav_menu(); ?>
 
-	</div>
-
-	<div class="content-wrapper page-info">
+	<div class="content-wrapper page-info content-right">
 
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>

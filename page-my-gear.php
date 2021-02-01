@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-<div class="black-bg ">
-  <div class="container-fluid">
+<div class="black-bg page-gear">
+  <div class="container">
 
       <div class="fixed-left">
         <div></div>
@@ -25,6 +25,7 @@
           <div class="grid-2 white">
               <div class="text-small"><?php the_field('text2'); ?></div>
             <?php endwhile; endif; ?>
+
               <div class="left-bar-container">
                 <div class="vertical-bar green">
                   <div class="bg-green"></div>
@@ -40,7 +41,9 @@
                         <span class="poly-regular text-small v-align-sup green"><?php the_field('tipo'); ?></span>
                       </div>
                       <div class="gear-description"><?php the_field('description'); ?></div>
-                      <img class="gear-image" src="<?php the_field('image'); ?>" alt="">
+                    <div class="gear-image">
+                      <img src="<?php the_field('image'); ?>" alt="">
+                    </div>
                     </div>
                   <?php endwhile; ?>
                 </div>

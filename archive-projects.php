@@ -14,9 +14,7 @@
   }
 </style>
 <div class="black-bg page-projects">
-	<div class="container">
-
-
+	<div class="">
 
 		<div class="fixed-left">
   		<div class="header-projects">
