@@ -1,6 +1,19 @@
 .page-info {
   color: white;
-  h1 {
-    color: $greenAOS;
+  height: 100vh;
+
+  .description {
+  	width: 50%;
+  }
+
+  .contact-info-container {
+  	.vertical-bar {
+  		display: grid;
+  		grid-template-columns: auto;
+  		grid-template-rows: 1fr auto;
+  	}
+  	column-gap: 20px;
+  	display: grid;
+  	grid-template-columns: 24px 1fr;
   }
 }

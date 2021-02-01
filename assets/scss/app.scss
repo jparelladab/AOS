@@ -4,6 +4,49 @@
 @import './_work.scss';
 @import './_my-gear.scss';
 @import './_info.scss';
+@import './_menu.scss';
+
+h1 {
+	color: $greenAOS;
+	font-family: PolySansBulky;
+	font-size: 130px !important;
+}
+
+.white {
+	color: #FFF;
+}
+.green {
+	color: $greenAOS;
+}
+.bg-green {
+	background-color: $greenAOS;
+}
+.text-sm-it {
+	font-size: 16px;
+	font-style: italic;
+}
+
+.text-small {
+	font-size: 16px;
+}
+
+.text-big {
+	font-size: 48px;
+	letter-spacing: 1.2px;
+}
+
+.poly-regular {
+	font-family: PolySansRegular;
+}
+.poly-bulky {
+	font-family: PolySansBulky;
+}
+
+.description {
+	font-family: PolySansRegular;
+	font-size: 24px;
+	letter-spacing: -0.25px;
+}
 
 a:visited {
   color: unset;
@@ -23,63 +66,26 @@ a {
 
 .black-bg {
 	background-color: #000;
-	height: 100vh;
+	// height: 100vh;
 	overflow:overlay;
 }
 
 .page-wrapper {
 	display: grid;
 	grid-template-columns: auto 1fr;
+	column-gap: 20px;
+	@media (max-width: 1024px){
+  	grid-template-columns: 1fr;
+  }
 }
 
-.nav-menu ul{
-	display: flex;
+.v-align-sup {
+	vertical-align: super;
 }
 
-.nav-menu {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	height: 70vh;
-	align-items: space-between;
-
-	ul {
-		margin: 0;
-		padding: 0;
-
-		li {
-			margin-right: 20px;
-
-			a {
-				color: #FFF;
-				text-decoration: none;
-				font-family: PolySansRegular;
-			}
-		}
-	}
-}
-
-
-
-.menu-item::after {
-  content: '';
-  display: block;
-  height:20px;
-  width: 2px;
-  background-color: blue;
-  margin: 0 auto;
-  border-top: 1px solid green;
-  transition: height 0.3s;
-}
-
-.menu-item:hover::after{
-  height: 65vh;
-}
-
-.menu-main-menu-container, .menu {
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
+.vertical-text {
+	 writing-mode: vertical-rl;
+    // text-orientation: mixed;
 }
 
 

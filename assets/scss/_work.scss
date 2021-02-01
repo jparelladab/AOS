@@ -1,4 +1,21 @@
+.page-projects {
+  .page-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 50px;
+  @media (max-width: 1024px){
+    grid-template-columns: 1fr;
+  }
+}
 
+  .nav-menu {
+   
+    @media (max-width: 1024px){
+      grid-row: 2;
+    }
+  }
+
+}
 .category-container {
   display: grid;
   grid-template-columns: 10px 1fr;

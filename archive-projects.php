@@ -13,8 +13,8 @@
     }
   }
 </style>
-<div class="black-bg">
-	<div class="container">
+<div class="black-bg page-projects">
+	<div class="container-fluid">
 
 
 		<div class="header-projects">
