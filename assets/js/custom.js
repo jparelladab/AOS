@@ -10,6 +10,9 @@ $(".gear-item").on('click', function(){
   $(".gear-image").slideUp();
 	$(this).find(".gear-description").slideToggle();
   $(this).find(".gear-image").slideToggle();
-})
+});
+
+$(".current-menu-item").append('<div class="menu-line"></div>');
+// $(".menu-line").css('height', '100%');
 
 });

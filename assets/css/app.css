@@ -279,19 +279,37 @@ a.project-anchor:hover {
   .page-info .description {
     width: 50%; }
 
-.current-menu-item a::after {
+.current_page_item {
+  align-self: flex-start;
+  height: 100%; }
+
+.menu-line {
   content: '';
   display: block;
   width: 1px;
-  height: 300px;
+  height: 100%;
+  transition: height 0.5s;
   background-color: #44d36f;
-  margin: 0 auto; }
+  margin: 0 auto;
+  animation-name: line-grow;
+  animation-duration: 1s; }
+
+/* The animation code */
+@keyframes line-grow {
+  from {
+    height: 0; }
+  to {
+    height: 100%; } }
 
 .nav-menu, .menu-main-menu-container, #menu-main-menu {
-  height: 100%; }
+  height: 100%;
+  display: flex;
+  align-items: flex-end; }
   .nav-menu li, .menu-main-menu-container li, #menu-main-menu li {
+    height: 100%;
     display: flex;
-    align-items: flex-end; }
+    justify-content: flex-end;
+    flex-direction: column; }
 
 .nav-menu ul {
   display: flex; }
