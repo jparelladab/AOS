@@ -195,23 +195,11 @@ a.project-anchor:hover {
   color: inherit; }
 
 .page-gear {
-  color: white;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-gap: 50px; }
-  @media (max-width: 1024px) {
-    .page-gear {
-      grid-template-columns: 1fr; } }
+  color: white; }
   .page-gear .text-small {
     font-family: PolySansRegular;
     font-size: 16px;
     font-style: italic; }
-
-.content-wrapper {
-  grid-column: 2; }
-  @media (max-width: 1024px) {
-    .content-wrapper {
-      grid-column: 1; } }
 
 .grid-1 {
   display: grid;

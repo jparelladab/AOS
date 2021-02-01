@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="black-bg page-gear">
-  <div class="container">
+
 
       <div class="fixed-left">
         <div></div>
@@ -52,7 +52,6 @@
 
       </div>
 
-   </div>
 
 </div>
 

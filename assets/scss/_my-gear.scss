@@ -1,12 +1,6 @@
 .page-gear {
 	color:white;
-	display: grid;
-	grid-template-columns: auto 1fr;
-	grid-gap: 50px;
 
-	@media (max-width: 1024px){
-		grid-template-columns: 1fr;
-	}
 
 
 
@@ -19,12 +13,12 @@
 
 }
 
-.content-wrapper {
-	grid-column: 2;
-	 @media (max-width: 1024px){
-	  	grid-column: 1;
-  }
-}
+// .content-wrapper {
+// 	grid-column: 2;
+// 	 @media (max-width: 1024px){
+// 	  	grid-column: 1;
+//   }
+// }
 
 .grid-1 {
   display: grid;
