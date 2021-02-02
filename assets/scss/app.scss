@@ -6,55 +6,9 @@
 @import './_info.scss';
 @import './_menu.scss';
 
-h1 {
-	color: $greenAOS;
-	font-family: PolySansBulky;
-	font-size: 130px !important;
-}
 
-.white {
-	color: #FFF;
-}
-.green {
-	color: $greenAOS;
-}
-.bg-green {
-	background-color: $greenAOS;
-}
-.text-sm-it {
-	font-size: 16px;
-	font-style: italic;
-}
 
-.text-small {
-	font-size: 16px;
-}
 
-.text-big {
-	font-size: 48px;
-	letter-spacing: 1.2px;
-}
-
-.poly-regular {
-	font-family: PolySansRegular;
-}
-.poly-bulky {
-	font-family: PolySansBulky;
-}
-
-.description {
-	font-family: PolySansRegular;
-	font-size: 24px;
-	letter-spacing: -0.25px;
-}
-
-a:visited {
-  color: unset;
-}
-a {
-  color: inherit !important;
-  text-decoration: none !important;
-}
 .bg-container {
   height: 100%;
 }
@@ -93,14 +47,7 @@ a {
   }
 }
 
-.v-align-sup {
-	vertical-align: super;
-}
 
-.vertical-text {
-	 writing-mode: vertical-rl;
-    // text-orientation: mixed;
-}
 
   .left-bar-container {
     .vertical-bar {

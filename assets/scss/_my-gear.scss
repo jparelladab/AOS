@@ -1,24 +1,4 @@
-.page-gear {
-	color:white;
 
-
-
-
-
-	.text-small {
-		font-family: PolySansRegular;
-		font-size: 16px;
-		font-style: italic;
-	}
-
-}
-
-// .content-wrapper {
-// 	grid-column: 2;
-// 	 @media (max-width: 1024px){
-// 	  	grid-column: 1;
-//   }
-// }
 
 .grid-1 {
   display: grid;
@@ -49,7 +29,9 @@
     position: relative;
     grid-column: 1;
     display: grid;
-    grid-template-columns: auto auto;
+    // grid-template-columns: auto auto;
+    grid-template-columns: 736px 200px;
+    
     .gear-title {
 
     }
@@ -62,8 +44,6 @@
 
   .gear-row {
     display: flex;
-  	font-family: PolySansBulky;
-  	font-size: 48px;
   	opacity: 0.5;
   	transition: opacity 0.5s;
   	cursor: pointer;

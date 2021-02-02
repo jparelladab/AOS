@@ -6,6 +6,56 @@
   font-family: PolySansBulky;
   src: url("../fonts/Poly-Italic.ttf"); }
 
+a {
+  color: inherit !important;
+  text-decoration: none !important; }
+
+a:visited {
+  color: unset; }
+
+.text-xl {
+  font-size: 130px; }
+
+.text-m {
+  font-size: 48px; }
+
+.text-s {
+  font-size: 24px; }
+
+.text-xs {
+  font-size: 16px; }
+
+.text-it {
+  font-style: italic; }
+
+.white {
+  color: #FFF; }
+
+.green {
+  color: #44d36f; }
+
+.bg-black {
+  background-color: #000; }
+
+.bg-green {
+  background-color: #44d36f; }
+
+.text-big {
+  font-size: 48px;
+  letter-spacing: 1.2px; }
+
+.poly-regular {
+  font-family: PolySansRegular; }
+
+.poly-bulky {
+  font-family: PolySansBulky; }
+
+.v-align-sup {
+  vertical-align: super; }
+
+.text-vertical {
+  writing-mode: vertical-rl; }
+
 .home-grid {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -25,7 +75,6 @@
     object-fit: cover; }
   .home-grid .img-text {
     color: #FFF;
-    font-size: 15px;
     position: absolute; }
   .home-grid .item1, .home-grid .item4, .home-grid .item5, .home-grid .item8 {
     margin: 150px 0; }
@@ -177,29 +226,9 @@
   grid-template-columns: 10px 1fr;
   column-gap: 20px;
   row-gap: 30px; }
-  .category-container .cat-name {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    font-size: 10px; }
-
-.color-bar .cat-name {
-  background-color: #000; }
-
-.project-title a {
-  color: #FFF;
-  text-decoration: none;
-  font-size: 24px;
-  font-family: PolySansRegular; }
 
 a.project-anchor:hover {
   color: inherit; }
-
-.page-gear {
-  color: white; }
-  .page-gear .text-small {
-    font-family: PolySansRegular;
-    font-size: 16px;
-    font-style: italic; }
 
 .grid-1 {
   display: grid;
@@ -223,7 +252,7 @@ a.project-anchor:hover {
   position: relative;
   grid-column: 1;
   display: grid;
-  grid-template-columns: auto auto; }
+  grid-template-columns: 736px 200px; }
   .gear-item .gear-plus {
     width: 30px;
     height: 30px;
@@ -231,8 +260,6 @@ a.project-anchor:hover {
     margin-right: 10px; }
   .gear-item .gear-row {
     display: flex;
-    font-family: PolySansBulky;
-    font-size: 48px;
     opacity: 0.5;
     transition: opacity 0.5s;
     cursor: pointer;
@@ -262,7 +289,6 @@ a.project-anchor:hover {
         display: none; } }
 
 .page-info {
-  color: white;
   height: 100vh; }
   .page-info .description {
     width: 50%; }
@@ -327,49 +353,6 @@ a.project-anchor:hover {
         text-decoration: none;
         font-family: PolySansRegular; }
 
-h1 {
-  color: #44d36f;
-  font-family: PolySansBulky;
-  font-size: 130px !important; }
-
-.white {
-  color: #FFF; }
-
-.green {
-  color: #44d36f; }
-
-.bg-green {
-  background-color: #44d36f; }
-
-.text-sm-it {
-  font-size: 16px;
-  font-style: italic; }
-
-.text-small {
-  font-size: 16px; }
-
-.text-big {
-  font-size: 48px;
-  letter-spacing: 1.2px; }
-
-.poly-regular {
-  font-family: PolySansRegular; }
-
-.poly-bulky {
-  font-family: PolySansBulky; }
-
-.description {
-  font-family: PolySansRegular;
-  font-size: 24px;
-  letter-spacing: -0.25px; }
-
-a:visited {
-  color: unset; }
-
-a {
-  color: inherit !important;
-  text-decoration: none !important; }
-
 .bg-container {
   height: 100%; }
 
@@ -403,12 +386,6 @@ a {
   @media (max-width: 1024px) {
     .page-wrapper {
       grid-template-columns: 1fr; } }
-
-.v-align-sup {
-  vertical-align: super; }
-
-.vertical-text {
-  writing-mode: vertical-rl; }
 
 .left-bar-container {
   column-gap: 20px;

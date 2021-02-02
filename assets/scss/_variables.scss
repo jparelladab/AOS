@@ -9,6 +9,71 @@
 
 $greenAOS: #44d36f;
 
+$text-xl: 130px;
+$text-m: 48px;
+$text-s: 24px;
+$text-xs: 16px;
+
+a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+a:visited {
+  color: unset;
+}
+
+.text-xl {
+	font-size: $text-xl;
+}
+.text-m {
+	font-size: $text-m;
+}
+.text-s {
+	font-size: $text-s;
+}
+.text-xs {
+	font-size: $text-xs;
+}
+
+.text-it {
+	font-style: italic;
+}
+
+.white {
+	color: #FFF;
+}
+.green {
+	color: $greenAOS;
+}
+.bg-black {
+	background-color: #000;
+}
+.bg-green {
+	background-color: $greenAOS;
+}
+
+
+.text-big {
+	font-size: 48px;
+	letter-spacing: 1.2px;
+}
+
+.poly-regular {
+	font-family: PolySansRegular;
+}
+.poly-bulky {
+	font-family: PolySansBulky;
+}
+
+.v-align-sup {
+	vertical-align: super;
+}
+
+.text-vertical {
+	 writing-mode: vertical-rl;
+    // text-orientation: mixed;
+}
+
 
 
 

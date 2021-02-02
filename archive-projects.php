@@ -38,15 +38,15 @@
 				?>
 
 				<div class="category-container mb-5 <?php echo $category->name; ?>">
-					<div class="color-bar" style="background-color: <?php echo $color; ?>">
-						<div class="cat-name pb-1" style="color: <?php echo $color; ?>"><?php echo $category->name; ?></div>
+					<div class="d-flex flex-column align-items-center" style="background-color: <?php echo $color; ?>">
+						<div class="text-xs bg-black text-vertical pb-1" style="color: <?php echo $color; ?>"><?php echo $category->name; ?></div>
 						<div class="color-bg" ></div>
 					</div>
 					<?php $loop = new WP_Query( array( 'post_type' => 'projects', 'category_name' => $category->name, 'posts_per_page' => -1 ) ); ?>
 					<div class="projects-category">
 					<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 						<div class="project-title" style="color:<?php echo $color; ?>">
-							<a class="project-anchor" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+							<a class="project-anchor white text-s poly-regular" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 						</div>
 					<?php endwhile; ?>
 					</div>

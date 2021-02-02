@@ -10,7 +10,7 @@
 	     	$sub_text = get_sub_field('text'); ?>
 	       <div class="img-wrap item<?php echo $count; ?>" style="grid-column:<?php echo $count; ?>">
 	       	<img src="<?php echo $sub_url; ?>" alt="" >
-	       	<div class="img-text"><?php echo $sub_text; ?></div>       	
+	       	<div class="img-text text-xs"><?php echo $sub_text; ?></div>       	
 	       </div>
 	       
 		<?php $count ++; endwhile; endif; ?>
