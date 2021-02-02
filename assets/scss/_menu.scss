@@ -3,8 +3,7 @@
   height:100%;
 }
 .menu-line {
-  content: '';
-  display: block;
+
   width: 1px;
   height: 100%;
   transition: height 0.5s;
@@ -12,6 +11,16 @@
   margin: 0 auto;
   animation-name: line-grow;
   animation-duration: 1s;
+}
+
+.menu-line::before {
+  content: '';
+  width: 9px;
+  text-align:center;
+  background-color: $greenAOS;
+  display: block;
+  border-bottom: 1px solid $greenAOS;
+  margin-left: -4px;
 }
 
 /* The animation code */

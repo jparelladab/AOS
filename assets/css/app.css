@@ -272,8 +272,6 @@ a.project-anchor:hover {
   height: 100%; }
 
 .menu-line {
-  content: '';
-  display: block;
   width: 1px;
   height: 100%;
   transition: height 0.5s;
@@ -281,6 +279,15 @@ a.project-anchor:hover {
   margin: 0 auto;
   animation-name: line-grow;
   animation-duration: 1s; }
+
+.menu-line::before {
+  content: '';
+  width: 9px;
+  text-align: center;
+  background-color: #44d36f;
+  display: block;
+  border-bottom: 1px solid #44d36f;
+  margin-left: -4px; }
 
 /* The animation code */
 @keyframes line-grow {
