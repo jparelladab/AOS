@@ -1,13 +1,29 @@
+.fixed-left {
+  position: fixed;
+  //offset of 82px (50px header + 32 wp-admin-menu)
+  top: 82px;
+  bottom: 100px;
+  height: 80vh;
+  left: 0px;
+  width:250px;
+  padding-left:50px;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+}
+
+
 .current_page_item {
   align-self: flex-start;
   height:100%;
+  position: relative;
 }
-.menu-line {
 
+.menu-line {
   width: 1px;
   height: 100%;
   transition: height 0.5s;
-  background-color: $greenAOS;
+  background-color: #FFF;
   margin: 0 auto;
   animation-name: line-grow;
   animation-duration: 1s;
@@ -17,9 +33,8 @@
   content: '';
   width: 9px;
   text-align:center;
-  background-color: $greenAOS;
   display: block;
-  border-bottom: 1px solid $greenAOS;
+  border-bottom: 1px solid  #FFF;
   margin-left: -4px;
 }
 
@@ -47,7 +62,7 @@
 }
 
 .nav-menu {
-
+  position: relative;
 	display: flex;
     display: flex;
     align-items: center;
@@ -72,6 +87,29 @@
 			}
 		}
 	}
+}
+
+
+.page-my-gear {
+  .nav-menu {
+    // position: relative;
+    .menu-text {
+      position: absolute;
+      right: 121px;
+      top: 41px;
+    }
+  }
+}
+
+.page-info {
+   .nav-menu {
+    position: relative;
+    .menu-text {
+      position: absolute;
+      right: 56px;
+      top: 41px;
+    }
+  }
 }
 
 

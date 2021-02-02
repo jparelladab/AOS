@@ -1,8 +1,15 @@
 .page-info {
   height: 100vh;
+  position: relative;
 
   .description {
   	width: 50%;
+  }
+
+  .text-check {
+  	position: absolute;
+    bottom: 100px;
+    right: 0;
   }
 
 

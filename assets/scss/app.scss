@@ -26,19 +26,8 @@
 .content-right {
   margin-left:250px;
 }
-.fixed-left {
-  position: fixed;
-  top: 32px;
-  height: 400px;
-  left: 0px;
-  width:250px;
-  padding-left:50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.page-wrapper {
 
+.page-wrapper {
 	display: grid;
 	grid-template-columns: auto 1fr;
 	column-gap: 20px;
@@ -57,7 +46,7 @@
     }
     column-gap: 20px;
     display: grid;
-    grid-template-columns: 24px 1fr;
+    grid-template-columns: 18px 1fr;
   }
 
 

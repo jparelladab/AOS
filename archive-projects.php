@@ -1,5 +1,7 @@
 <?php get_header(); ?>
-
+<?php $insta_link = get_field('insta-link', 17); ?>
+<?php $vimeo_link = get_field('vimeo-link', 17); ?>
+<?php $check_me = get_field('check-me-out', 17); ?>
 <style>
   .logo {
     color: #44d36f;
@@ -13,21 +15,14 @@
     }
   }
 </style>
-<div class="black-bg page-projects">
-	<div class="">
+<div class="black-bg page-projects min-height-100">
 
+		<div class="logo-projects green text-m">A|O|S</div>
 		<div class="fixed-left">
-  		<div class="header-projects">
-  			<div class="logo" style="color:">
-  				<div class="A">A</div>
-  				<div class="O">O</div>
-  				<div class="S">S</div>
-  			</div>
-  		</div>
 			<div class="nav-menu">
 				<?php wp_nav_menu(); ?>
 			</div>
-    </div>
+    	</div>
 
 			<div class="content-wrapper content-right">
 
@@ -53,10 +48,9 @@
 				</div>
 
 				<?php endforeach; ?>
-
+				<div class="text-align-right mx-5 white"><?php echo $check_me; ?> <a href="<?php echo $insta_link; ?>" target="_blank">Instagram | </a><a href="<?php echo $vimeo_link; ?>" target="_blank">vimeo</a></div>
 			</div>
 
-		</div>
 	</div>
 </div>
 <?php get_footer(); ?>

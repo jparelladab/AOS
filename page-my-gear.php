@@ -1,11 +1,13 @@
 <?php get_header(); ?>
 
-<div class="black-bg white">
+<div class="black-bg white page-my-gear min-height-100">
 
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
       <div class="fixed-left">
         <div></div>
         <div class="nav-menu">
+          <div class="green text-xs text-vertical menu-text"><?php the_field('vertical-text'); ?></div>
 
           <?php wp_nav_menu(); ?>
 
@@ -13,8 +15,10 @@
       </div>
 
       <div class="content-wrapper content-right mb-4">
+        <div class="height-header pos-relative">
+          <div class="logo-gear text-align-right green text-m text-vertical">A|O|S</div>
+        </div>
 
-        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
           <h1 class="mb-4 text-xl green poly-bulky"><?php the_title(); ?></h1>
 
           <div class="grid-1 mb-4">
@@ -23,7 +27,10 @@
           </div>
 
           <div class="grid-2 white">
-              <div class="text-it text-xs mb-2"><?php the_field('text2'); ?></div>
+              <div class="text-it text-xs mb-2 d-flex justify-content-between">
+                <div><?php the_field('text2'); ?></div>
+                <div class="mx-5"><?php the_field('check-me-out'); ?> <a href="<?php the_field('link-instagram'); ?>" target="_blank">Instagram | </a><a href="<?php the_field('link-vimeo'); ?>" target="_blank">vimeo</a></div>
+                </div>
             <?php endwhile; endif; ?>
 
               <div class="left-bar-container">

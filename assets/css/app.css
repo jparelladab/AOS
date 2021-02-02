@@ -17,13 +17,13 @@ a:visited {
   font-size: 130px; }
 
 .text-m {
-  font-size: 48px; }
+  font-size: 38px; }
 
 .text-s {
-  font-size: 24px; }
+  font-size: 20px; }
 
 .text-xs {
-  font-size: 16px; }
+  font-size: 12px; }
 
 .text-it {
   font-style: italic; }
@@ -55,6 +55,21 @@ a:visited {
 
 .text-vertical {
   writing-mode: vertical-rl; }
+
+.text-align-right {
+  text-align: right; }
+
+.min-height-100 {
+  min-height: 100vh; }
+
+.width-50 {
+  width: 50%; }
+
+.height-header {
+  height: 50px; }
+
+.pos-relative {
+  position: relative; }
 
 .home-grid {
   display: grid;
@@ -209,6 +224,10 @@ a:visited {
   font-family: PolySansBulky;
   font-size: 40px; }
 
+.logo-projects {
+  width: 250px;
+  padding-left: 50px; }
+
 .page-projects .page-wrapper {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -229,6 +248,11 @@ a:visited {
 
 a.project-anchor:hover {
   color: inherit; }
+
+.logo-gear {
+  position: absolute;
+  top: 20px;
+  right: 20px; }
 
 .grid-1 {
   display: grid;
@@ -289,19 +313,34 @@ a.project-anchor:hover {
         display: none; } }
 
 .page-info {
-  height: 100vh; }
+  height: 100vh;
+  position: relative; }
   .page-info .description {
     width: 50%; }
+  .page-info .text-check {
+    position: absolute;
+    bottom: 100px;
+    right: 0; }
+
+.fixed-left {
+  position: fixed;
+  top: 82px;
+  bottom: 100px;
+  height: 80vh;
+  left: 0px;
+  width: 250px;
+  padding-left: 50px; }
 
 .current_page_item {
   align-self: flex-start;
-  height: 100%; }
+  height: 100%;
+  position: relative; }
 
 .menu-line {
   width: 1px;
   height: 100%;
   transition: height 0.5s;
-  background-color: #44d36f;
+  background-color: #FFF;
   margin: 0 auto;
   animation-name: line-grow;
   animation-duration: 1s; }
@@ -310,9 +349,8 @@ a.project-anchor:hover {
   content: '';
   width: 9px;
   text-align: center;
-  background-color: #44d36f;
   display: block;
-  border-bottom: 1px solid #44d36f;
+  border-bottom: 1px solid  #FFF;
   margin-left: -4px; }
 
 /* The animation code */
@@ -336,6 +374,7 @@ a.project-anchor:hover {
   display: flex; }
 
 .nav-menu {
+  position: relative;
   display: flex;
   display: flex;
   align-items: center;
@@ -353,6 +392,18 @@ a.project-anchor:hover {
         text-decoration: none;
         font-family: PolySansRegular; }
 
+.page-my-gear .nav-menu .menu-text {
+  position: absolute;
+  right: 121px;
+  top: 41px; }
+
+.page-info .nav-menu {
+  position: relative; }
+  .page-info .nav-menu .menu-text {
+    position: absolute;
+    right: 56px;
+    top: 41px; }
+
 .bg-container {
   height: 100%; }
 
@@ -368,17 +419,6 @@ a.project-anchor:hover {
 .content-right {
   margin-left: 250px; }
 
-.fixed-left {
-  position: fixed;
-  top: 32px;
-  height: 400px;
-  left: 0px;
-  width: 250px;
-  padding-left: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; }
-
 .page-wrapper {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -390,7 +430,7 @@ a.project-anchor:hover {
 .left-bar-container {
   column-gap: 20px;
   display: grid;
-  grid-template-columns: 24px 1fr; }
+  grid-template-columns: 18px 1fr; }
   .left-bar-container .vertical-bar {
     display: grid;
     grid-template-columns: auto;

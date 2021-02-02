@@ -10,9 +10,14 @@
 $greenAOS: #44d36f;
 
 $text-xl: 130px;
-$text-m: 48px;
-$text-s: 24px;
-$text-xs: 16px;
+// $text-m: 48px;
+$text-m: 38px;
+// $text-s: 24px;
+$text-s: 20px;
+// $text-xs: 16px;
+$text-xs: 12px;
+
+$height-header: 50px;
 
 a {
   color: inherit !important;
@@ -73,6 +78,27 @@ a:visited {
 	 writing-mode: vertical-rl;
     // text-orientation: mixed;
 }
+
+.text-align-right {
+	text-align: right;
+}
+
+.min-height-100 {
+	min-height: 100vh;
+}
+
+.width-50 {
+	width: 50%;
+}
+
+.height-header {
+	height: $height-header;
+}
+
+.pos-relative {
+	position: relative;
+}
+
 
 
 
