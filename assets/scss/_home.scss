@@ -1,3 +1,12 @@
+
+.page-home {
+
+  .logo-home {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+  }
+
 .home-grid {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -7,11 +16,20 @@
 
   .img-wrap {
     width: 370px;
-      height: 215px;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    height: 215px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 10px solid;
+    border-right: 10px solid;
+    position: relative;
+
+    .genre {
+      position: absolute;
+      top: 0;
+      left: -30px;
+    }
   }
   img {
     width: 100%;
@@ -36,4 +54,19 @@
   .item2, .item4, .item6, .item8 {
     grid-row: 2;
   }
+}
+
+
+.nav-menu {
+  // height: auto;
+  // position: relative;
+
+  .text-check {
+    position: absolute;
+    bottom: 0;
+    left: 45vw;
+    width: fit-content;
+  }
+}
+
 }
