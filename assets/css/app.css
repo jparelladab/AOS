@@ -322,7 +322,7 @@ a.project-anchor:hover {
   position: relative;
   grid-column: 1;
   display: grid;
-  grid-template-columns: 736px 200px; }
+  grid-template-columns: auto auto; }
   .gear-item .gear-plus {
     width: 30px;
     height: 30px;
