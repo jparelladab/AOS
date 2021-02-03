@@ -19,6 +19,8 @@ $text-xs: 12px;
 
 $height-header: 50px;
 
+$screen-s: 400px;
+
 a {
   color: inherit !important;
   text-decoration: none !important;
@@ -101,6 +103,26 @@ a:visited {
 
 .pos-relative {
 	position: relative;
+}
+
+.no-mobile {
+  @media(max-width: 500px){
+    display: none;
+  }
+}
+
+.content-right {
+  margin-left:250px !important;
+}
+
+.mobile-no-content-right {
+  @media(max-width: $screen-s){
+    margin-left: revert !important;
+  }
+}
+
+.container {
+  width: revert !important;
 }
 
 

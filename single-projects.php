@@ -50,8 +50,8 @@
       </div>
 			<div class="project-wrapper">
 				<div class="single-project-img"><?php the_field('banner_video'); ?></div>
-				<div class="d-flex justify-content-end">
-          <div class="more custom-color mt-4">+</div>
+				<div class="d-flex justify-content-end mt-3">
+          <img class="more" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/plus-icon2.png'; ?>" alt="">
         </div>
 
 
@@ -88,14 +88,14 @@
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
       <div class="project-container" style="color:<?php echo $color; ?>">
-        <?php the_field('screenshot'); ?>
+        <img src="<?php the_field('screenshot'); ?>" alt="">
         <a class="project-anchor custom-color" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
       </div>
     <?php endwhile; ?>
         </div>
 
   </div>
-    <div class="nav-menu">
+    <div class="nav-menu mb-3">
       <?php wp_nav_menu(); ?>
     </div>
 	</div>

@@ -18,13 +18,9 @@
 <div class="black-bg page-projects min-height-100">
 
 		<div class="logo-projects green text-m">A|O|S</div>
-		<div class="fixed-left">
-			<div class="nav-menu">
-				<?php wp_nav_menu(); ?>
-			</div>
-    	</div>
 
-			<div class="content-wrapper content-right">
+
+			<div class="content-wrapper container content-right mobile-no-content-right">
 
 				<?php $categories = get_categories();
 
@@ -48,7 +44,12 @@
 				</div>
 
 				<?php endforeach; ?>
-				<div class="text-align-right mx-5 white"><?php echo $check_me; ?> <a href="<?php echo $insta_link; ?>" target="_blank">Instagram | </a><a href="<?php echo $vimeo_link; ?>" target="_blank">vimeo</a></div>
+				<div class="check-me text-align-right white"><?php echo $check_me; ?> <a href="<?php echo $insta_link; ?>" target="_blank">Instagram | </a><a href="<?php echo $vimeo_link; ?>" target="_blank">vimeo</a></div>
+        <div class="fixed-left">
+          <div class="nav-menu">
+            <?php wp_nav_menu(); ?>
+          </div>
+        </div>
 			</div>
 
 	</div>

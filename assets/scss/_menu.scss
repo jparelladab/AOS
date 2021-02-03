@@ -3,13 +3,14 @@
   //offset of 82px (50px header + 32 wp-admin-menu)
   top: 82px;
   bottom: 100px;
-  height: 80vh;
+  // height: 80vh;
   left: 0px;
   width:250px;
   padding-left:50px;
   // display: flex;
   // flex-direction: column;
   // justify-content: space-between;
+
 }
 
 
@@ -68,10 +69,10 @@
     align-items: center;
 
 	color: #FFF;
-	@media (max-width: 1024px){
-  	height: auto;
+	// @media (max-width: 1024px){
+ //  	height: auto;
 
-  }
+ //  }
 
 	ul {
 		margin: 0;

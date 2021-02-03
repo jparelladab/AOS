@@ -1,17 +1,35 @@
+// .single-project-img {
+//   width:100%;
+//   height: 70vh;
+//   object-fit: cover;
+//   transition: height 0.3s;
+//   iframe {
+//     width: 100%;
+//     height: 100%;
+//   }
+// }
+
 .single-project-img {
-  width:100%;
-  height: 70vh;
-  object-fit: cover;
-  transition: height 0.3s;
-  iframe {
-    width: 100%;
-    height: 100%;
-  }
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
 }
 
-.img-small {
-  height: 20vh;
+.single-project-img iframe,
+.single-project-img object,
+.single-project-img embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
+
+// .img-small {
+//   height: 20vh;
+// }
 .project-info-container {
   display: none;
 
@@ -43,7 +61,7 @@
   z-index: 999;
   position: absolute;
   bottom: 0;
-  left: -5px;
+  left: -4px;
 }
 
 
@@ -104,15 +122,9 @@
 
 
 .more {
-  border: 1px solid green;
-  border-radius: 50%;
+
   height: 30px;
   width: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
-  line-height: 30px;
   cursor: pointer;
 }
 
@@ -129,29 +141,35 @@
   align-items: center;
   height: 100%;
 
-  .video-veil {
-    position: absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right: 0;
-    z-index: 2;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 
-  iframe {
-    position: absolute;
-    top:0;
-    bottom: 0;
-    left:0;
-    right: 0;
-    width: 100%;
-    height:100%;
-    z-index: 1;
-    // object-fit: cover;
-  }
-    .player .vp-controls-wrapper {
-      display: none !important;
-    }
+  // .video-veil {
+  //   position: absolute;
+  //   top:0;
+  //   bottom:0;
+  //   left:0;
+  //   right: 0;
+  //   z-index: 2;
+  // }
+
+  // iframe {
+  //   position: absolute;
+  //   top:0;
+  //   bottom: 0;
+  //   left:0;
+  //   right: 0;
+  //   width: 100%;
+  //   height:100%;
+  //   z-index: 1;
+  //   // object-fit: cover;
+  // }
+    // .player .vp-controls-wrapper {
+    //   display: none !important;
+    // }
 
   .project-anchor {
     position: absolute;

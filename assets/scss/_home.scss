@@ -1,5 +1,6 @@
 
 .page-home {
+  position: relative;
 
   .logo-home {
     position: absolute;
@@ -13,9 +14,10 @@
 .home-grid {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: 400px 400px;
+  grid-template-rows: 37vh 37vh;
   column-gap: 50px;
   row-gap: 50px;
+  margin-top:50px;
 
   .img-wrap {
     width: 370px;
@@ -45,10 +47,10 @@
   }
 
   .item1, .item4, .item5, .item8 {
-    margin: 150px 0;
+    margin: 100px 0;
   }
   .item2, .item3, .item6, .item7 {
-    margin: 50px 0;
+    margin: 0;
   }
 
   .item1, .item3, .item5, .item7 {
