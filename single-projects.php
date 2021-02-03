@@ -23,7 +23,7 @@
       border-right: 1px solid <?php echo $text_color; ?>;
     }
     .custom-color {
-      color:<?php echo $text_color; ?>;
+      color:<?php echo $text_color; ?> !important;
     }
     .nav-menu {
       height: revert;
@@ -49,7 +49,7 @@
         </div>
       </div>
 			<div class="project-wrapper">
-				<img class="single-project-img" src="<?php the_field('banner_image'); ?>" alt="">
+				<div class="single-project-img"><?php the_field('banner_video'); ?></div>
 				<div class="d-flex justify-content-end">
           <div class="more custom-color mt-4">+</div>
         </div>
@@ -88,7 +88,7 @@
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
       <div class="project-container" style="color:<?php echo $color; ?>">
-        <img class="full-img" src="<?php the_field('banner_image'); ?>" alt="">
+        <?php the_field('screenshot'); ?>
         <a class="project-anchor custom-color" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
       </div>
     <?php endwhile; ?>

@@ -79,6 +79,9 @@ a:visited {
   top: 50px;
   left: 50px; }
 
+.page-home .fixed-left {
+  height: 86vh; }
+
 .page-home .home-grid {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -126,6 +129,9 @@ a:visited {
   height: 70vh;
   object-fit: cover;
   transition: height 0.3s; }
+  .single-project-img iframe {
+    width: 100%;
+    height: 100%; }
 
 .img-small {
   height: 20vh; }
@@ -231,15 +237,30 @@ a:visited {
   justify-content: center;
   align-items: center;
   height: 100%; }
-  .project-container img {
+  .project-container .video-veil {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2; }
+  .project-container iframe {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; }
+    z-index: 1; }
+  .project-container .player .vp-controls-wrapper {
+    display: none !important; }
   .project-container .project-anchor {
     position: absolute;
     font-size: 20px;
     font-family: PolySansBulky;
-    text-decoration: none; }
+    text-decoration: none;
+    z-index: 3; }
 
 .other-title {
   font-family: PolySansBulky;
