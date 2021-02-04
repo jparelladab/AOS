@@ -461,6 +461,10 @@ a.project-anchor:hover {
     position: absolute;
     bottom: 100px;
     right: 0; }
+    @media (max-width: 600px) {
+      .page-info .text-check {
+        position: revert;
+        margin-bottom: 50px; } }
 
 .fixed-left {
   position: fixed;

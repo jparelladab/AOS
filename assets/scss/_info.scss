@@ -42,6 +42,10 @@
   	position: absolute;
     bottom: 100px;
     right: 0;
+    @media(max-width: $screen-s){
+      position: revert;
+      margin-bottom: 50px;
+    }
   }
 
 
