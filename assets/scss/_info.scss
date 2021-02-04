@@ -1,6 +1,38 @@
 .page-info {
   height: 100vh;
   position: relative;
+  cursor: url('../images/clicker-white.png'), auto !important;
+
+  .height-header {
+    height: auto;
+  }
+  .logo-info {
+    @media(max-width: $screen-s){
+      text-align: left;
+      font-size: calc(#{$text-xl} - 75px);
+    }
+  }
+
+  .text-xl {
+    @media(max-width: $screen-s){
+      font-size: calc(#{$text-xl} - 75px);
+    }
+  }
+
+  .fixed-left {
+    @media(max-width: $screen-s){
+      position: revert;
+      height: 50px;
+      margin-bottom: 25px;
+      padding-left:revert;
+    }
+  }
+
+  .width-50 {
+    @media(max-width: $screen-s){
+      width: 100%;
+    }
+  }
 
   .description {
   	width: 50%;

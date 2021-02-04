@@ -4,6 +4,9 @@
 }
 
 .page-projects {
+
+  cursor: url('../images/clicker-white.png'), auto !important;
+  
   .fixed-left {
     @media(max-width: $screen-s){
       position: revert;
@@ -12,21 +15,13 @@
       padding-left:revert;
     }
   }
-//   .page-wrapper {
-//   display: grid;
-//   grid-template-columns: auto 1fr;
-//   grid-gap: 50px;
-//   @media (max-width: 1024px){
-//     grid-template-columns: 1fr;
-//   }
-// }
 
-  .nav-menu {
+  // .nav-menu {
 
-    @media (max-width: 1024px){
-      grid-row: 2;
-    }
-  }
+  //   @media (max-width: 1024px){
+  //     grid-row: 2;
+  //   }
+  // }
 
   .check-me {
     margin-bottom: 100px;

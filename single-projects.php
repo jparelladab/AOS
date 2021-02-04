@@ -7,6 +7,11 @@
 <style>
   body {
     background-color: <?php echo $bg_color; ?>;
+    <?php if ($text_color === '#ffffff') : ?>
+      cursor: url('<?php echo get_stylesheet_directory_uri() . '/assets/images/clicker-white.png'; ?>'), auto !important;
+      <?php else : ?>
+        cursor: url('<?php echo get_stylesheet_directory_uri() . '/assets/images/clicker.png'; ?>'), auto !important;
+    <?php endif; ?>
   }
   .separator-bar::after {
     background-color: <?php echo $text_color; ?>;
@@ -56,7 +61,7 @@
 
 
         <div class="project-info-container py-4">
-          <div class="project-info-grid pb-5">
+          <div class="project-info-grid">
             <div class="separator-bar" style="background-color: <?php echo $text_color; ?>"></div>
   					<div class="team px-5" style="color: <?php echo $text_color; ?>">
               <div class="sm-text-vertical">Team</div>
@@ -72,34 +77,37 @@
                     </div>
                   </div>
 
-               <?php endwhile; endif; ?>
-               <div class="text-small-it"><?php the_field('place_date'); ?></div>
+              <?php endwhile; endif; ?>
+              <div class="text-small-it"><?php the_field('place_date'); ?></div>
+              <div class="image-left mt-5"><img src="<?php the_field('image2'); ?>" alt=""></div>
   					</div>
 
   					<div class="image-right px-5"><img src="<?php the_field('image1'); ?>" alt=""></div>
-  					<div class="image-left px-5"><img src="<?php the_field('image2'); ?>" alt=""></div>
             <div class="image-center"><img src="<?php the_field('image3'); ?>" alt=""></div>
 
   				</div>
           <div class="other-title custom-color d-flex justify-content-center">More <?php echo $category->name; ?></div>
+          
           <div class="other-projects py-4">
 
-    <?php $loop = new WP_Query( array( 'post_type' => 'projects', 'category_name' => $category->name, 'posts_per_page' => 3, 'orderby' => 'rand') ); ?>
-    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+            <?php $loop = new WP_Query( array( 'post_type' => 'projects', 'category_name' => $category->name, 'posts_per_page' => 3, 'orderby' => 'rand') ); ?>
+            <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                <a class="project-anchor text-s poly-bulky" href="<?php the_permalink(); ?>">
+                  <div class="project-container white">
+                      <span class="title"><?php the_title(); ?></span>
+                      <img src="<?php the_field('screenshot'); ?>" alt="">                  
+                  </div>
+                </a>
+            <?php endwhile; ?>
 
-      <div class="project-container" style="color:<?php echo $color; ?>">
-        <img src="<?php the_field('screenshot'); ?>" alt="">
-        <a class="project-anchor custom-color" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-      </div>
-    <?php endwhile; ?>
-        </div>
+          </div>
 
+    <img class="close" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/x-icon.png'; ?>" alt="">
   </div>
     <div class="nav-menu mb-3">
       <?php wp_nav_menu(); ?>
     </div>
 	</div>
-
 		</div>
 
 	<?php endwhile; endif; ?>

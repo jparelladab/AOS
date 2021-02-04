@@ -19,11 +19,14 @@ $text-xs: 12px;
 
 $height-header: 50px;
 
-$screen-s: 400px;
+$screen-s: 600px;
+
+
 
 a {
   color: inherit !important;
   text-decoration: none !important;
+  cursor: url('../images/clicker-green.png'), auto !important;
 }
 a:visited {
   color: unset;
@@ -31,12 +34,21 @@ a:visited {
 
 .text-xl {
 	font-size: $text-xl;
+	@media (max-width: $screen-s){
+ 		font-size: calc(#{$text-xl} - 50px);
+    }
 }
 .text-m {
 	font-size: $text-m;
+	@media (max-width: $screen-s){
+ 		font-size: calc(#{$text-m} - 16px);
+    }
 }
 .text-s {
 	font-size: $text-s;
+	@media (max-width: $screen-s){
+ 		font-size: calc(#{$text-s} - 5px);
+    }
 }
 .text-xs {
 	font-size: $text-xs;
@@ -106,7 +118,7 @@ a:visited {
 }
 
 .no-mobile {
-  @media(max-width: 500px){
+  @media(max-width: $screen-s){
     display: none;
   }
 }

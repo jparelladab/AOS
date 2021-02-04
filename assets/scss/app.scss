@@ -36,15 +36,4 @@
 
 
 
-  .left-bar-container {
-    .vertical-bar {
-      display: grid;
-      grid-template-columns: auto;
-      grid-template-rows: 1fr auto;
-    }
-    column-gap: 20px;
-    display: grid;
-    grid-template-columns: 18px 1fr;
-  }
-
 

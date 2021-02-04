@@ -2,43 +2,34 @@
 
 <div class="black-bg white page-my-gear min-height-100">
 
-        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-      <div class="fixed-left">
-        <div></div>
-        <div class="nav-menu">
-          <div class="green text-xs text-vertical menu-text"><?php the_field('vertical-text'); ?></div>
-
-          <?php wp_nav_menu(); ?>
-
-        </div>
-      </div>
-
-      <div class="content-wrapper content-right mb-4">
+      <div class="content-wrapper container content-right mb-4 mobile-no-content-right">
         <div class="height-header pos-relative">
           <div class="logo-gear text-align-right green text-m text-vertical">A|O|S</div>
         </div>
 
-          <h1 class="mb-4 text-xl green poly-bulky"><?php the_title(); ?></h1>
+        <h1 class="mb-4 text-xl green poly-bulky"><?php the_title(); ?></h1>
 
-          <div class="grid-1 mb-4">
-            <div class="description white text-s"><?php the_field('text1'); ?></div>
-            <img src="<?php the_field('image'); ?>" alt="">
-          </div>
+        <div class="grid-1 mb-4">
+          <div class="description white text-s"><?php the_field('text1'); ?></div>
+          <img src="<?php the_field('image'); ?>" alt="">
+        </div>
 
-          <div class="grid-2 white">
-              <div class="text-it text-xs mb-2 d-flex justify-content-between">
-                <div><?php the_field('text2'); ?></div>
-                <div class="mx-5"><?php the_field('check-me-out'); ?> <a href="<?php the_field('link-instagram'); ?>" target="_blank">Instagram | </a><a href="<?php the_field('link-vimeo'); ?>" target="_blank">vimeo</a></div>
-                </div>
-            <?php endwhile; endif; ?>
+          <div class="grid-2 white mb-5">
 
               <div class="left-bar-container">
                 <div class="vertical-bar green">
                   <div class="bg-green"></div>
-                  <div class="text-vertical text-xs green mt-2"><?php the_field('vertical-text'); ?></div>
+                  <div class="text-vertical text-xs green mt-2"><?php the_field('vertical-text-list'); ?></div>
                 </div>
+    <?php endwhile; endif; ?>
+            
                 <div class="gear-grid">
+                  <div class="text-it text-xs mb-2 d-flex justify-content-between">
+                    <div><?php the_field('text2'); ?></div>
+                    <div class="social mx-5"><?php the_field('check-me-out'); ?> <a href="<?php the_field('link-instagram'); ?>" target="_blank">Instagram | </a><a href="<?php the_field('link-vimeo'); ?>" target="_blank">vimeo</a></div>
+                  </div>
                   <?php $loop = new WP_Query( array( 'post_type' => 'gears', 'posts_per_page' => -1 ) ); ?>
                   <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
                     <div class="gear-item">
@@ -56,9 +47,15 @@
                 </div>
               </div>
           </div>
-
+          <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+          <div class="fixed-left">
+            <div class="nav-menu">
+              <div class="green text-xs text-vertical menu-text no-mobile"><?php the_field('vertical-text-menu'); ?></div>
+              <?php wp_nav_menu(); ?>
+            </div>
+          </div>
+          <?php endwhile; endif; ?>
       </div>
-
 
 </div>
 
