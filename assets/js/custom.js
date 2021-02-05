@@ -6,8 +6,8 @@ $(".more, .close").on('click', function(){
 });
 
 $(".gear-item").on('click', function(){
-  $(".gear-description").slideUp();
-  $(".gear-image").slideUp();
+  // $(".gear-description").slideUp();
+  // $(".gear-image").slideUp();
 	$(this).find(".gear-description").slideToggle();
   $(this).find(".gear-image").slideToggle();
 });

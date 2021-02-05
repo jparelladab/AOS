@@ -373,7 +373,8 @@ a.project-anchor:hover {
         display: none; } }
 
 .grid-2 {
-  position: relative; }
+  position: relative;
+  margin-bottom: 100px; }
   @media (max-width: 600px) {
     .grid-2 .social {
       position: absolute;

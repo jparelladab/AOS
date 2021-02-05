@@ -16,7 +16,7 @@
           <img src="<?php the_field('image'); ?>" alt="">
         </div>
 
-          <div class="grid-2 white mb-5">
+          <div class="grid-2 white">
 
               <div class="left-bar-container">
                 <div class="vertical-bar green">
@@ -24,7 +24,7 @@
                   <div class="text-vertical text-xs green mt-2"><?php the_field('vertical-text-list'); ?></div>
                 </div>
     <?php endwhile; endif; ?>
-            
+
                 <div class="gear-grid">
                   <div class="text-it text-xs mb-2 d-flex justify-content-between">
                     <div><?php the_field('text2'); ?></div>
