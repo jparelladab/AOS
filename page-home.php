@@ -6,7 +6,7 @@
 
 	      <div class="nav-menu black text-xs poly-regular hover-black-tiny">
 	        <?php wp_nav_menu(); ?>
-			<div class="text-check no-mobile"><?php the_field('check-me-out'); ?> <a class="hover-green-tiny" href="<?php the_field('link-instagram'); ?>" target="_blank">Instagram | </a><a class="hover-green-tiny" href="<?php the_field('link-vimeo'); ?>" target="_blank">vimeo</a></div>
+			<div class="text-check no-mobile"><?php the_field('check-me-out'); ?> <a class="hover-black-tiny" href="<?php the_field('link-instagram'); ?>" target="_blank">Instagram | </a><a class="hover-black-tiny" href="<?php the_field('link-vimeo'); ?>" target="_blank">vimeo</a></div>
 	      </div>
 	    </div>
 
