@@ -140,8 +140,11 @@ a:visited {
     position: absolute;
     top: 50px;
     left: 50px; }
-  .page-home .fixed-left {
-    height: 86vh; }
+  .page-home .nav-menu {
+    position: fixed;
+    bottom: 25px;
+    left: 50px;
+    height: revert; }
   .page-home .home-grid {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
@@ -169,7 +172,8 @@ a:visited {
       object-fit: cover; }
     .page-home .home-grid .img-text {
       color: #FFF;
-      position: absolute; }
+      position: absolute;
+      text-align: center; }
     .page-home .home-grid .item1, .page-home .home-grid .item4, .page-home .home-grid .item5, .page-home .home-grid .item8 {
       margin: 100px 0; }
     .page-home .home-grid .item2, .page-home .home-grid .item3, .page-home .home-grid .item6, .page-home .home-grid .item7 {
@@ -182,7 +186,7 @@ a:visited {
     position: absolute;
     bottom: 0;
     left: 45vw;
-    width: fit-content; }
+    width: max-content; }
 
 .single-project-img {
   position: relative;

@@ -2,13 +2,13 @@
 
 <div class="green-bg cursor-black-tiny page-home">
 	<div class="logo-home black text-m mx-4">A|O|S</div>
-	    <div class="fixed-left">
+	    <!-- <div class="fixed-left"> -->
 
 	      <div class="nav-menu black text-xs poly-regular hover-black-tiny">
 	        <?php wp_nav_menu(); ?>
 			<div class="text-check no-mobile"><?php the_field('check-me-out'); ?> <a class="hover-black-tiny" href="<?php the_field('link-instagram'); ?>" target="_blank">Instagram | </a><a class="hover-black-tiny" href="<?php the_field('link-vimeo'); ?>" target="_blank">vimeo</a></div>
 	      </div>
-	    </div>
+	    <!-- </div> -->
 
 	<div class="home-grid content-right mr-5">
 
