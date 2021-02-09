@@ -10,7 +10,7 @@
 	      </div>
 	    </div>
 
-	<div class="home-grid content-right">
+	<div class="home-grid content-right mr-5">
 
 	<?php if (have_posts()) : while (have_posts()) : the_post();
 		$count = 1;
@@ -21,12 +21,15 @@
 	     	$sub_color = get_sub_field('color');  ?>
 	       <div class="img-wrap item<?php echo $count; ?>" style="grid-column:<?php echo $count; ?>;border-color: <?php echo $sub_color; ?>;">
 	       	<img src="<?php echo $sub_url; ?>" alt="" >
-	       	<div class="img-text text-xs"><?php echo $sub_text; ?></div>
+	       	<div class="img-text text-s poly-bulky"><?php echo $sub_text; ?></div>
 	       	<div class="genre text-vertical text-xs poly-regular" style="color: <?php echo $sub_color; ?>;"><?php echo $sub_genre ?></div>
 	       </div>
 
 		<?php $count ++; endwhile; endif; ?>
 	<?php endwhile; endif; ?>
+    <div style="grid-column:9;">
+
+    </div>
 
 	</div>
 
