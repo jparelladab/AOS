@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-<div class="black-bg page-info">
+<div class="black-bg page-info cursor-green-tiny">
   <div class="header-space"></div>
   <div class="container-fluid page-wrapper">
 
@@ -28,13 +28,13 @@
                     </div>
               </div>
         </div>
-    <div class="text-check"><?php the_field('check-me-out'); ?> <a href="<?php the_field('link-instagram'); ?>" target="_blank">Instagram | </a><a href="<?php the_field('link-vimeo'); ?>" target="_blank">vimeo</a></div>
+    <div class="text-check"><?php the_field('check-me-out'); ?> <a class="hover-green-tiny" href="<?php the_field('link-instagram'); ?>" target="_blank">Instagram | </a><a class="hover-green-tiny" href="<?php the_field('link-vimeo'); ?>" target="_blank">vimeo</a></div>
   		<?php endwhile; endif; ?>
 
 
     <div class="fixed-left">
 
-      <div class="nav-menu">
+      <div class="nav-menu hover-green-tiny">
         <div class="green text-xs text-vertical menu-text no-mobile"><?php the_field('vertical-text'); ?></div>
         <?php wp_nav_menu(); ?>
       </div>

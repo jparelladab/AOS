@@ -1,10 +1,10 @@
 @font-face {
   font-family: PolySansRegular;
-  src: url('../fonts/Poly-Regular.ttf');
+  src: url('../fonts/PolySans-Neutral.woff');
 }
 @font-face {
   font-family: PolySansBulky;
-  src: url('../fonts/Poly-Italic.ttf');
+  src: url('../fonts/PolySans-Bulky.woff');
 }
 
 $greenAOS: #44d36f;
@@ -22,11 +22,48 @@ $height-header: 50px;
 $screen-s: 600px;
 
 
+.cursor-green-tiny {
+	cursor: url('../images/cursor-green-tiny.png'), auto !important;
+}
+.cursor-green-wide {
+	cursor: url('../images/cursor-green-wide.png'), auto !important;
+}
+.hover-green-wide {
+	cursor: url('../images/hover-green-wide.png'), auto !important;
+}
+.hover-green-tiny {
+	cursor: url('../images/hover-green-tiny.png'), auto !important;
+}
+.cursor-black-tiny {
+	cursor: url('../images/cursor-black-tiny.png'), auto !important;
+}
+.cursor-black-wide {
+	cursor: url('../images/cursor-black-wide.png'), auto !important;
+}
+.hover-black-wide {
+	cursor: url('../images/hover-black-wide.png'), auto !important;
+}
+.hover-black-tiny {
+	cursor: url('../images/hover-black-tiny.png'), auto !important;
+}
+.cursor-white-tiny {
+	cursor: url('../images/cursor-white-tiny.png'), auto !important;
+}
+.cursor-white-wide {
+	cursor: url('../images/cursor-white-wide.png'), auto !important;
+}
+.hover-white-wide {
+	cursor: url('../images/hover-white-wide.png'), auto !important;
+}
+.hover-white-tiny {
+	cursor: url('../images/hover-white-tiny.png'), auto !important;
+}
 
 a {
   color: inherit !important;
   text-decoration: none !important;
-  cursor: url('../images/clicker-green.png'), auto !important;
+  // cursor: url('../images/clicker-green.png'), auto !important;
+  cursor: inherit;
 }
 a:visited {
   color: unset;

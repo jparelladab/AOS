@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 
-<div class="green-bg page-home">
+<div class="green-bg cursor-black-tiny page-home">
 	<div class="logo-home black text-m mx-4">A|O|S</div>
 	    <div class="fixed-left">
 
-	      <div class="nav-menu black text-xs poly-regular">
+	      <div class="nav-menu black text-xs poly-regular hover-black-tiny">
 	        <?php wp_nav_menu(); ?>
-			<div class="text-check no-mobile"><?php the_field('check-me-out'); ?> <a href="<?php the_field('link-instagram'); ?>" target="_blank">Instagram | </a><a href="<?php the_field('link-vimeo'); ?>" target="_blank">vimeo</a></div>
+			<div class="text-check no-mobile"><?php the_field('check-me-out'); ?> <a class="hover-green-tiny" href="<?php the_field('link-instagram'); ?>" target="_blank">Instagram | </a><a class="hover-green-tiny" href="<?php the_field('link-vimeo'); ?>" target="_blank">vimeo</a></div>
 	      </div>
 	    </div>
 
@@ -19,7 +19,7 @@
 	     	$sub_text = get_sub_field('text');
 	     	$sub_genre = get_sub_field('genre');
 	     	$sub_color = get_sub_field('color');  ?>
-	       <div class="img-wrap item<?php echo $count; ?>" style="grid-column:<?php echo $count; ?>;border-color: <?php echo $sub_color; ?>;">
+	       <div class="img-wrap item<?php echo $count; ?> cursor-white-tiny" style="grid-column:<?php echo $count; ?>;border-color: <?php echo $sub_color; ?>;">
 	       	<img src="<?php echo $sub_url; ?>" alt="" >
 	       	<div class="img-text text-s poly-bulky"><?php echo $sub_text; ?></div>
 	       	<div class="genre text-vertical text-xs poly-regular" style="color: <?php echo $sub_color; ?>;"><?php echo $sub_genre ?></div>

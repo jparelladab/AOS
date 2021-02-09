@@ -1,0 +1,37 @@
+.page-drag {
+	display: flex;
+	position: relative;
+	align-items: center;
+
+	.logo-drag {
+		position: absolute;
+		top: 0;
+	}
+
+	.hold-drag {
+		width: 100%;
+		.line {
+			height: 1px;
+			width: 60vw;
+			background-color: #000000;
+			position: relative;
+		}
+		.line::after {
+			content: '';
+		    width: 1px;
+		    height: 19px;
+		    background-color: #000000;
+		    display: block;
+		    position: absolute;
+		    right: 0;
+		    top: -9px;
+		}
+	}
+
+	.nav-menu {
+		grid-row: 3;
+		position: absolute;
+		bottom:50px;
+	}
+
+}

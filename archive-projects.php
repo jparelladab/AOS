@@ -15,7 +15,7 @@
     }
   }
 </style>
-<div class="black-bg page-projects min-height-100">
+<div class="black-bg page-projects min-height-100 cursor-green-tiny">
 
 	<div class="logo-projects green text-m">A|O|S</div>
 
@@ -37,17 +37,17 @@
 				<div class="projects-category">
 				<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 					<div class="project-title" style="color:<?php echo $color; ?>">
-						<a class="project-anchor white text-s poly-regular" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+						<a class="project-anchor white text-s poly-regular hover-green-tiny" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 					</div>
 				<?php endwhile; ?>
 				</div>
 			</div>
 
 			<?php endforeach; ?>
-			<div class="check-me text-xs text-align-right white"><?php echo $check_me; ?> <a href="<?php echo $insta_link; ?>" target="_blank">Instagram | </a><a href="<?php echo $vimeo_link; ?>" target="_blank">vimeo</a></div>
+			<div class="check-me text-xs text-align-right white"><?php echo $check_me; ?> <a class="hover-green-tiny" href="<?php echo $insta_link; ?>" target="_blank">Instagram | </a><a class="hover-green-tiny" href="<?php echo $vimeo_link; ?>" target="_blank">vimeo</a></div>
 	        
 	        <div class="fixed-left">
-	          <div class="nav-menu">
+	          <div class="nav-menu hover-green-tiny">
 	            <?php wp_nav_menu(); ?>
 	          </div>
 	        </div>

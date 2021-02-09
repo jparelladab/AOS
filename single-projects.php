@@ -7,11 +7,7 @@
 <style>
   body {
     background-color: <?php echo $bg_color; ?>;
-    <?php if ($text_color === '#ffffff') : ?>
-      cursor: url('<?php echo get_stylesheet_directory_uri() . '/assets/images/clicker-white.png'; ?>'), auto !important;
-      <?php else : ?>
-        cursor: url('<?php echo get_stylesheet_directory_uri() . '/assets/images/clicker.png'; ?>'), auto !important;
-    <?php endif; ?>
+
   }
   .separator-bar::after {
     background-color: <?php echo $text_color; ?>;
@@ -40,7 +36,7 @@
 </style>
 
 
-	<div class="container">
+	<div class="container cursor-green-tiny">
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -54,9 +50,9 @@
         </div>
       </div>
 			<div class="project-wrapper">
-				<div class="single-project-img"><?php the_field('banner_video'); ?></div>
+				<div class="single-project-img hover-green-tiny"><?php the_field('banner_video'); ?></div>
 				<div class="d-flex justify-content-end mt-3">
-          <img class="more" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/plus-icon2.png'; ?>" alt="">
+          <img class="more hover-green-tiny" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/plus-icon2.png'; ?>" alt="">
         </div>
 
 
@@ -92,7 +88,7 @@
 
             <?php $loop = new WP_Query( array( 'post_type' => 'projects', 'category_name' => $category->name, 'posts_per_page' => 3, 'orderby' => 'rand') ); ?>
             <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                <a class="project-anchor text-s poly-bulky" href="<?php the_permalink(); ?>">
+                <a class="project-anchor text-s poly-bulky hover-green-tiny" href="<?php the_permalink(); ?>">
                   <div class="project-container white">
                       <span class="title"><?php the_title(); ?></span>
                       <img src="<?php the_field('screenshot'); ?>" alt="">                  
@@ -102,9 +98,9 @@
 
           </div>
 
-    <img class="close" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/x-icon.png'; ?>" alt="">
+    <img class="hover-green-tiny close" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/x-icon.png'; ?>" alt="">
   </div>
-    <div class="nav-menu mb-3">
+    <div class="nav-menu mb-3 hover-green-tiny">
       <?php wp_nav_menu(); ?>
     </div>
 	</div>

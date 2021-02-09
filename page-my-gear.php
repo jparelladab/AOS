@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="black-bg white page-my-gear min-height-100">
+<div class="black-bg white page-my-gear min-height-100 cursor-green-tiny">
 
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -28,11 +28,11 @@
                 <div class="gear-grid">
                   <div class="text-it text-xs mb-2 d-flex justify-content-between">
                     <div><?php the_field('text2'); ?></div>
-                    <div class="social mx-5"><?php the_field('check-me-out'); ?> <a href="<?php the_field('link-instagram'); ?>" target="_blank">Instagram | </a><a href="<?php the_field('link-vimeo'); ?>" target="_blank">vimeo</a></div>
+                    <div class="social mx-5"><?php the_field('check-me-out'); ?> <a class="hover-green-tiny" href="<?php the_field('link-instagram'); ?>" target="_blank">Instagram | </a><a class="hover-green-tiny" href="<?php the_field('link-vimeo'); ?>" target="_blank">vimeo</a></div>
                   </div>
                   <?php $loop = new WP_Query( array( 'post_type' => 'gears', 'posts_per_page' => -1 ) ); ?>
                   <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                    <div class="gear-item">
+                    <div class="gear-item hover-green-tiny">
                       <div class="gear-row text-m poly-bulky">
                         <img class="gear-plus" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/plus-icon2.png'; ?>" alt="">
                         <div class="gear-title"><?php the_title(); ?></div>
@@ -49,7 +49,7 @@
           </div>
           <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
           <div class="fixed-left">
-            <div class="nav-menu">
+            <div class="nav-menu hover-green-tiny">
               <div class="green text-xs text-vertical menu-text no-mobile"><?php the_field('vertical-text-menu'); ?></div>
               <?php wp_nav_menu(); ?>
             </div>
