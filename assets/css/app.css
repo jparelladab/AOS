@@ -134,6 +134,9 @@ a:visited {
 .container {
   width: revert !important; }
 
+.width-fit {
+  min-width: fit-content; }
+
 .page-home {
   position: relative; }
   .page-home .logo-home {

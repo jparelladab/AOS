@@ -15,7 +15,7 @@
     }
   }
 </style>
-<div class="black-bg page-projects min-height-100 cursor-green-tiny">
+<div class="black-bg page-projects min-height-100 cursor-green-tiny" data-barba="container" data-barba-namespace="projects">
 
 	<div class="logo-projects green text-m">A|O|S</div>
 
@@ -45,7 +45,7 @@
 
 			<?php endforeach; ?>
 			<div class="check-me text-xs text-align-right white"><?php echo $check_me; ?> <a class="hover-green-tiny" href="<?php echo $insta_link; ?>" target="_blank">Instagram | </a><a class="hover-green-tiny" href="<?php echo $vimeo_link; ?>" target="_blank">vimeo</a></div>
-	        
+
 	        <div class="fixed-left">
 	          <div class="nav-menu hover-green-tiny">
 	            <?php wp_nav_menu(); ?>

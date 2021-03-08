@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="black-bg white page-my-gear min-height-100 cursor-green-tiny">
+<div class="black-bg white page-my-gear min-height-100 cursor-green-tiny" data-barba="container" data-barba-namespace="my-gear">
 
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 

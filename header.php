@@ -27,8 +27,11 @@
 		<?php // or, set /favicon.ico for IE10 win ?>
 		<meta name="msapplication-TileColor" content="#f01d4f">
 		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
-            <meta name="theme-color" content="#121212">
+    <meta name="theme-color" content="#121212">
 
+    <!-- <script type="module" src="./node_modules/@barba/core/dist/barba.js"></script> -->
+    <script src="https://unpkg.com/gsap@latest/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 		<?php // wordpress head functions ?>
@@ -43,7 +46,7 @@
 
 	</head>
 
-	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
+	<body <?php body_class(); ?> data-barba="wrapper" itemscope itemtype="http://schema.org/WebPage">
 
 		<div id="container">
 

@@ -1,42 +1,43 @@
 <?php get_header(); ?>
 
-<?php $category = get_the_category()[0]; ?>
-<?php $bg_color = get_field('background_color', $category); ?>
-<?php $text_color = get_field('text-color', $category); ?>
-
-<style>
-  body {
-    background-color: <?php echo $bg_color; ?>;
-
-  }
-  .separator-bar::after {
-    background-color: <?php echo $text_color; ?>;
-  }
-  .logo {
-    color: <?php echo $text_color; ?>;
-    display: flex;
-    font-size: 30px;
-    }
-    .logo * {
-      padding: 0 5px;
-    }
-    .A, .O {
-      border-right: 1px solid <?php echo $text_color; ?>;
-    }
-    .custom-color {
-      color:<?php echo $text_color; ?> !important;
-    }
-    .nav-menu {
-      height: revert;
-      color: <?php echo $text_color; ?>;
-    }
-    .menu-item::after {
-      content: revert;
-    }
-</style>
 
 
-	<div class="container cursor-green-tiny">
+
+
+	<div class="container cursor-green-tiny" data-barba="container" data-barba-namespace="single-project">
+    <?php $category = get_the_category()[0]; ?>
+    <?php $bg_color = get_field('background_color', $category); ?>
+    <?php $text_color = get_field('text-color', $category); ?>
+    <style>
+      body {
+        background-color: <?php echo $bg_color; ?>;
+
+      }
+      .separator-bar::after {
+        background-color: <?php echo $text_color; ?>;
+      }
+      .logo {
+        color: <?php echo $text_color; ?>;
+        display: flex;
+        font-size: 30px;
+        }
+        .logo * {
+          padding: 0 5px;
+        }
+        .A, .O {
+          border-right: 1px solid <?php echo $text_color; ?>;
+        }
+        .custom-color {
+          color:<?php echo $text_color; ?> !important;
+        }
+        .nav-menu {
+          height: revert;
+          color: <?php echo $text_color; ?>;
+        }
+        .menu-item::after {
+          content: revert;
+        }
+    </style>
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -83,7 +84,7 @@
 
   				</div>
           <div class="other-title custom-color d-flex justify-content-center">More <?php echo $category->name; ?></div>
-          
+
           <div class="other-projects py-4">
 
             <?php $loop = new WP_Query( array( 'post_type' => 'projects', 'category_name' => $category->name, 'posts_per_page' => 3, 'orderby' => 'rand') ); ?>
@@ -91,7 +92,7 @@
                 <a class="project-anchor text-s poly-bulky hover-green-tiny" href="<?php the_permalink(); ?>">
                   <div class="project-container white">
                       <span class="title"><?php the_title(); ?></span>
-                      <img src="<?php the_field('screenshot'); ?>" alt="">                  
+                      <img src="<?php the_field('screenshot'); ?>" alt="">
                   </div>
                 </a>
             <?php endwhile; ?>

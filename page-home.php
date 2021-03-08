@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="green-bg cursor-black-tiny page-home">
+<div class="green-bg cursor-black-tiny page-home" data-barba="container" data-barba-namespace="home">
 	<div class="logo-home black text-m mx-4">A|O|S</div>
 	    <!-- <div class="fixed-left"> -->
 

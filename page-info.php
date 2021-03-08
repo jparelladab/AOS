@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-<div class="black-bg page-info cursor-green-tiny">
+<div class="black-bg page-info cursor-green-tiny" data-barba="container" data-barba-namespace="info">
   <div class="header-space"></div>
   <div class="container-fluid page-wrapper">
 
@@ -24,7 +24,7 @@
                     <div class="text-xs text-it white poly-regular mb-4"><?php the_field('lets-do-this'); ?></div>
                     <div class="contact-details">
                       <div class="text-m white poly-bulky mb-4"><?php the_field('email'); ?><span class="mx-2 poly-regular text-xs text-it v-align-sup green"><?php the_field('email-sub'); ?></span></div>
-                      <div class="text-m white poly-bulky mb-4"><?php the_field('phone'); ?><span class="mx-2 poly-regular text-xs text-it v-align-sup green"><?php the_field('phone-sub'); ?></span></div>                    
+                      <div class="text-m white poly-bulky mb-4"><?php the_field('phone'); ?><span class="mx-2 poly-regular text-xs text-it v-align-sup green"><?php the_field('phone-sub'); ?></span></div>
                     </div>
               </div>
         </div>
