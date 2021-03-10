@@ -34,7 +34,58 @@ jQuery(document).ready(function( $ ) {
     }
   }],
   // for custom code
-  views: [{
+  views: [
+  {
+    namespace: 'drag',
+    beforeEnter() {
+      // update the menu based on user navigation
+      // menu.update();
+    },
+    afterEnter() {
+      // refresh the parallax based on new page content
+      // parallax.refresh();
+      if (sessionStorage.getItem('loaded') == 'true'){
+        $('.logo-drag').css('top', 0);
+      } else {
+
+      $('#modal').show();
+      const loader = document.getElementById('loader-fall');
+      const logo = document.getElementById('logo_drag');
+      var data = sessionStorage.getItem('loaded');
+      const modal = document.getElementById('modal');
+
+      var i = 0;
+      function move() {
+        if (i == 0) {
+          i = 1;
+          var elem = document.getElementById("percent");
+          var count = 0;
+          var id = setInterval(frame, 20);
+          function frame() {
+            if (count >= 100) {
+              clearInterval(id);
+          loader.classList.add('fall');
+          setTimeout(function(){
+            modal.style.display = 'none';
+            logo.style.top = 0;
+            console.log('done');
+            }, 2000);
+              i = 0;
+            } else {
+              count++;
+              elem.innerHTML = count + "%";
+            }
+          }
+        }
+        // Save data to sessionStorage
+        sessionStorage.setItem('loaded', true);
+      }
+        window.onload = move();
+      }
+
+    }
+  },
+  {
     namespace: 'single-project',
     beforeEnter() {
       // update the menu based on user navigation

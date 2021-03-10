@@ -145,6 +145,12 @@ a:visited {
 .width-50 {
 	width: 50%;
 }
+.width-100 {
+  width:100%;
+}
+.height-100vh {
+  height: 100vh;
+}
 
 .height-header {
 	height: $height-header;
@@ -176,6 +182,11 @@ a:visited {
 
 .width-fit {
   min-width:fit-content;
+}
+
+.row-center {
+  display: flex;
+
 }
 
 
