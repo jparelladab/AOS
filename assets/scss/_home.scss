@@ -24,28 +24,46 @@
   column-gap: 50px;
   row-gap: 50px;
   margin-top:50px;
-
-  .img-wrap {
+  .project-container-home {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+  .img-wrap-home {
     width: 370px;
     height: 215px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-left: 10px solid;
-    border-right: 10px solid;
     position: relative;
 
     .genre {
       position: absolute;
       top: 0;
-      left: -30px;
+      left: -20px;
     }
-  }
-  img {
-    width: 100%;
-    height: 100%;
+    a {
+      width: 100%;
+      height: 90%;
+      transition: width 1s, height 1s;
+      iframe {
+        height:100%;
+        width:100%;
+      }
+    }
+    a:hover {
+      width: 110%;
+      height:100%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
+      transition: width 1s, height 1s;
+    }
   }
   .img-text {
     color: #FFF;
@@ -80,5 +98,9 @@
     width: max-content;
   }
 }
+
+// .vimeo-video {
+//   height: 215px;
+// }
 
 }

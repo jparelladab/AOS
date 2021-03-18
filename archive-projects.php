@@ -29,7 +29,7 @@
 			?>
 
 			<div class="category-container mb-5 <?php echo $category->name; ?>">
-				<div class="d-flex flex-column align-items-center" style="background-color: <?php echo $color; ?>">
+				<div class="width-fit d-flex flex-column align-items-center" style="background-color: <?php echo $color; ?>">
 					<div class="text-xs bg-black text-vertical pb-1" style="color: <?php echo $color; ?>"><?php echo $category->name; ?></div>
 					<div class="color-bg" ></div>
 				</div>

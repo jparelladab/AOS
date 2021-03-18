@@ -12,21 +12,21 @@
 
 	<div class="home-grid content-right mr-5">
 
-	<?php if (have_posts()) : while (have_posts()) : the_post();
-		$count = 1;
-		if( have_rows('images') ): while( have_rows('images') ) : the_row();
-	     	$sub_url = get_sub_field('image');
-	     	$sub_text = get_sub_field('text');
-	     	$sub_genre = get_sub_field('genre');
-	     	$sub_color = get_sub_field('color');  ?>
-	       <div class="img-wrap item<?php echo $count; ?> cursor-white-tiny" style="grid-column:<?php echo $count; ?>;border-color: <?php echo $sub_color; ?>;">
-	       	<img src="<?php echo $sub_url; ?>" alt="" >
-	       	<div class="img-text text-s poly-bulky"><?php echo $sub_text; ?></div>
-	       	<div class="genre text-vertical text-xs poly-regular" style="color: <?php echo $sub_color; ?>;"><?php echo $sub_genre ?></div>
-	       </div>
 
-		<?php $count ++; endwhile; endif; ?>
-	<?php endwhile; endif; ?>
+
+  <?php $loop = new WP_Query( array( 'post_type' => 'projects', 'category_name' => $category->name, 'posts_per_page' => 8, 'orderby' => 'rand') ); ?>
+   <?php $count = 1; ?>
+    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+      <?php $category = get_the_category()[0]; ?>
+      <?php $bg_color = get_field('background_color', $category); ?>
+          <div class="img-wrap-home project-container-home  item<?php echo $count; ?> cursor-white-tiny" style="grid-column:<?php echo $count; ?>;">
+            <a class="pos-relative text-s poly-bulky hover-green-tiny d-flex justify-content-center align-items-center" href="<?php the_permalink(); ?>">
+              <div class="img-text text-s poly-bulky"><?php the_title(); ?></div>
+            <iframe class="vimeo-video" id="<?php echo $count; ?>" src="https://player.vimeo.com/video/<?php the_field('vimeo_code'); ?>?api=1&background=1&autoplay=0" frameborder="0" style="background-color: <?php echo $bg_color; ?>;"></iframe>
+            <div class="genre text-vertical text-xs poly-regular" style="color: #bb2455;"><?php echo $category->name; ?></div>
+            </a>
+          </div>
+    <?php $count++; endwhile; ?>
     <div style="grid-column:9;">
 
     </div>

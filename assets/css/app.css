@@ -164,24 +164,39 @@ a:visited {
     column-gap: 50px;
     row-gap: 50px;
     margin-top: 50px; }
-    .page-home .home-grid .img-wrap {
+    .page-home .home-grid .project-container-home {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%; }
+    .page-home .home-grid .img-wrap-home {
       width: 370px;
       height: 215px;
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
-      border-left: 10px solid;
-      border-right: 10px solid;
       position: relative; }
-      .page-home .home-grid .img-wrap .genre {
+      .page-home .home-grid .img-wrap-home .genre {
         position: absolute;
         top: 0;
-        left: -30px; }
-    .page-home .home-grid img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; }
+        left: -20px; }
+      .page-home .home-grid .img-wrap-home a {
+        width: 100%;
+        height: 90%;
+        transition: width 1s, height 1s; }
+        .page-home .home-grid .img-wrap-home a iframe {
+          height: 100%;
+          width: 100%; }
+      .page-home .home-grid .img-wrap-home a:hover {
+        width: 110%;
+        height: 100%; }
+      .page-home .home-grid .img-wrap-home img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: width 1s, height 1s; }
     .page-home .home-grid .img-text {
       color: #FFF;
       position: absolute;
@@ -332,7 +347,7 @@ a:visited {
   .project-container a {
     width: 100%;
     height: 100%; }
-  .project-container img {
+  .project-container iframe {
     height: 100%;
     width: 100%;
     object-fit: cover;
