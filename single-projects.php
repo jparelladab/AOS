@@ -51,7 +51,9 @@
         </div>
       </div>
 			<div class="project-wrapper">
-				<div class="single-project-img hover-green-tiny"><?php the_field('banner_video'); ?></div>
+				<div class="single-project-img hover-green-tiny">
+          <iframe id="video" src="https://player.vimeo.com/video/<?php the_field('vimeo_code'); ?>?api=1&autoplay=0" frameborder="0"></iframe>
+          </div>
 				<div class="d-flex justify-content-end mt-3">
           <img class="more hover-green-tiny" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/plus-icon2.png'; ?>" alt="">
         </div>

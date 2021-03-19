@@ -3,6 +3,8 @@
 
 jQuery(document).ready(function( $ ) {
 
+if ($(".page-home")[0]){
+
   var player1 = $("#1");
   var player2 = $("#2");
   var player3 = $("#3");
@@ -60,30 +62,8 @@ jQuery(document).ready(function( $ ) {
       froogaloop8.api('pause');
   });
 
+}
 
-  // $(".vimeo-video").each(function(index, element){
-  //     var iframe = $(element)[0];
-  //     var player = $f(iframe);
-  //     froogaloop = $f(player);
-  //     $(player).mouseover(function() {
-  //         froogaloop.api('play');
-  //     }).mouseout(function() {
-  //         froogaloop.api('pause');
-  //     });
-  //     // player.addEvent('mouse', onFinish);
-  //     // var player = $f(element);;
-  //     // // froogaloop = $f(player);
-  //     // // console.log(froogaloop);
-  //     // $(player).on('hover', function(){
-  //     //   console.log('hover');
-  //     //   $(this).mouseover(function(){
-  //     //     player.api('play');
-  //     // }).mouseout(function(){
-  //     //     player.api('pause');
-  //     // });
-  //     // });
-
-  // });
 
   $(".current-menu-item").append('<div class="menu-line"></div>');
 
