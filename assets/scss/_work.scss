@@ -6,7 +6,7 @@
 .page-projects {
 
   // cursor: url('../images/clicker-white.png'), auto !important;
-  
+
   .fixed-left {
     @media(max-width: $screen-s){
       position: revert;
@@ -39,6 +39,15 @@
   column-gap: 20px;
   row-gap: 30px;
 }
+
+.video-hover {
+  display: none;
+  position: absolute;
+  right:0;
+  top:0;
+}
+
+
 
 
 

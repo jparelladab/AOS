@@ -65,6 +65,8 @@ if ($(".page-home")[0]){
 }
 
 
+
+
   $(".current-menu-item").append('<div class="menu-line"></div>');
 
   $(".project-container .vp-controls-wrapper").hide();
@@ -196,6 +198,14 @@ if ($(".page-home")[0]){
     },
     afterEnter() {
       $(".current-menu-item").append('<div class="menu-line"></div>');
+      $('.page-projects .project-anchor').on({
+          mouseenter: function() {
+              $(this).next().toggle();
+          },
+          mouseleave: function() {
+              $(this).next().toggle();
+          }
+      });
     }
   },
   {

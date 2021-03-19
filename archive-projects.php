@@ -36,8 +36,9 @@
 				<?php $loop = new WP_Query( array( 'post_type' => 'projects', 'category_name' => $category->name, 'posts_per_page' => -1 ) ); ?>
 				<div class="projects-category">
 				<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-					<div class="project-title" style="color:<?php echo $color; ?>">
+					<div class="project-title pos-relative" style="color:<?php echo $color; ?>">
 						<a class="project-anchor white text-s poly-regular hover-green-tiny" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            <div class="video-hover"><iframe class="vimeo-video" id="video-hover-<?php the_field('vimeo_code'); ?>" src="https://player.vimeo.com/video/<?php the_field('vimeo_code'); ?>?api=1&background=1&autoplay=1" frameborder="0"></iframe></div>
 					</div>
 				<?php endwhile; ?>
 				</div>

@@ -398,6 +398,12 @@ a:visited {
   column-gap: 20px;
   row-gap: 30px; }
 
+.video-hover {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
 a.project-anchor:hover {
   color: inherit; }
 
